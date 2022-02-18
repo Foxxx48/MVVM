@@ -40,6 +40,6 @@ val moduleCategories = module{
 
     single { CategoriesUseCase(get()) }
 
-    viewModel { CategoriesViewModel.CategoriesViewModel(get()) }
+    viewModel { CategoriesViewModel(get()) }
 
 }

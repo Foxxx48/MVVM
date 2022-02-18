@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.fox.mvvm.domain.useCase.CategoriesUseCase
 import kotlinx.coroutines.launch
 
-class CategoriesViewModel {
+
     class CategoriesViewModel (private val categoriesUseCase: CategoriesUseCase):
         ViewModel() {
 

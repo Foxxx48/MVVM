@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.fox.mvvm.R
+import com.fox.mvvm.databinding.CategoryItemBinding
 import com.fox.mvvm.models.CategoriesModel
+import com.squareup.picasso.Picasso
 
 class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
 
@@ -39,8 +41,8 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
             categories: CategoriesModel
         ) {
 
-            val getImage = categories.image
-            Picasso.get().load(getImage).into(binding.imageCategory)
+//            val getImage = categories.image
+//            Picasso.get().load(getImage).into(binding.imageCategory)
             binding.idCategory.text = categories.id.toString()
             binding.nameCategory.text = categories.name
 
