@@ -18,7 +18,7 @@ class ApiClient private constructor(){
 
     companion object {
 
-        private val BASE_URL = "http://foxxdi5s.beget.tech/"
+        private val BASE_URL = "http://foxxxdim.online/"
 
         private var apiClient: ApiClient? = null
         private var retrofit: Retrofit? = null
