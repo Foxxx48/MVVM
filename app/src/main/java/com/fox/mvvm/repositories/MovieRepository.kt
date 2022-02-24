@@ -5,7 +5,7 @@ import com.fox.mvvm.localDB.MoviesDAO
 import com.fox.mvvm.models.MoviesModel
 
 class MovieRepository (private val movieDAO: MoviesDAO){
-    val movies = movieDAO.getAllMovies()
+//    val movies = movieDAO.getAllMovies()
 
 //    fun getFilter (nameCategory:String, durationMovie:String):
 //            LiveData<List<MoviesModel>> {

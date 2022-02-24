@@ -5,7 +5,6 @@ import android.widget.Toast
 import com.fox.mvvm.data.api.ApiClient
 import com.fox.mvvm.dataSource.CategoriesApiDataSource
 import com.fox.mvvm.dataSource.CategoriesDataSource
-import com.fox.mvvm.models.CategoriesApiModel
 import com.fox.mvvm.models.CategoriesModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -17,18 +16,18 @@ class CategoriesApiDataSourceIMPL (private val categoriesDataSource: CategoriesD
     override fun startMigration (context: Context) {
 
         val call = ApiClient.instance?.api?.loadCategoriesApi()
-        call?.enqueue(object: Callback<ArrayList<CategoriesApiModel>> {
+        call?.enqueue(object: Callback<ArrayList<CategoriesModel>> {
             override fun onResponse(
-                call: Call<ArrayList<CategoriesApiModel>>,
-                response: Response<ArrayList<CategoriesApiModel>>
+                call: Call<ArrayList<CategoriesModel>>,
+                response: Response<ArrayList<CategoriesModel>>
             ) {
 
 
-                var loadCategories: ArrayList<CategoriesApiModel>? = null
+                var loadCategories: ArrayList<CategoriesModel>? = null
 
                 loadCategories?.clear()
 
-                loadCategories = (response.body() as ArrayList<CategoriesApiModel>?)!!
+                loadCategories = (response.body() as ArrayList<CategoriesModel>?)!!
 
                 for (audit in loadCategories) {
 
@@ -51,7 +50,7 @@ class CategoriesApiDataSourceIMPL (private val categoriesDataSource: CategoriesD
 
             }
 
-            override fun onFailure(call: Call<ArrayList<CategoriesApiModel>>, t: Throwable) {
+            override fun onFailure(call: Call<ArrayList<CategoriesModel>>, t: Throwable) {
                 Toast.makeText(context, "ОШИБКА! ВКЛЮЧИТЕ ИНТЕРНЕТ!", Toast.LENGTH_SHORT).show()
 
             }

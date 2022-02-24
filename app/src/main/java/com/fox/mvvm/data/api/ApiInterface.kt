@@ -1,6 +1,6 @@
 package com.fox.mvvm.data.api
 
-import com.fox.mvvm.models.CategoriesApiModel
+import com.fox.mvvm.models.CategoriesModel
 import com.fox.mvvm.models.MoviesApiModel
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -59,7 +59,7 @@ interface ApiInterface {
     fun clearMovies(): Call<ResponseBody?>?
 
     @GET("getCategory.php")
-    fun loadCategoriesApi(): Call<ArrayList<CategoriesApiModel>>
+    fun loadCategoriesApi(): Call<ArrayList<CategoriesModel>>
 
     @GET("getMovie.php")
     fun getMovie(): Call<ArrayList<MoviesApiModel>>

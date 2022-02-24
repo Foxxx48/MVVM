@@ -3,9 +3,12 @@ package com.fox.mvvm.models
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-class CategoriesApiModel {
+data class CategoriesApiModel (
     @SerializedName("id") @Expose
-    var id: Int? = null
+    var id: Int? = null,
     @SerializedName("name") @Expose
-    var name: String? = null
-}
+    var name: String? = null,
+    @SerializedName("image") @Expose
+    var image: String? = null
+
+)
